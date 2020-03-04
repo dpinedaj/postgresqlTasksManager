@@ -35,11 +35,11 @@ class Files:
     def fn_get_len_path(self, ar_path):
         listPath = None
         lenPath = None
-        constants = cts()
         try:
             listPath = os.listdir(ar_path)
             lenPath = len(listPath)
-        except Exception as exc:
+            
+        except:
 
             lenPath = 0
         

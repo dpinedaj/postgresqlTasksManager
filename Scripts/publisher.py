@@ -21,7 +21,7 @@ if __name__ == '__main__':
     while True:
         
         try:
-            filesList = sorted(files.fn_get_list_path(cts.ORIGIN_PATH)[0])
+            filesList = files.fn_get_list_path(cts.ORIGIN_PATH)[0]
             fileName = random.choice(filesList)
             id = fileName.split('.')[0]
             if id not in doneList:

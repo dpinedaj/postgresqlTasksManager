@@ -2,8 +2,8 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.sql.expression import func
+from .constants import Constants as cts 
 
-DB_URL='postgresql://admin:admin@localhost:5432/pruebas'
-engine = create_engine(DB_URL)
+engine = create_engine(cts.DB_URL)
 Session = sessionmaker(bind=engine)
 session = Session()

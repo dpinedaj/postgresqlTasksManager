@@ -14,7 +14,8 @@ class Constants:
         self.__GLOBALCONFIG = os.path.join(os.path.dirname(os.path.abspath(__file__)),"config","globalConfig.properties")
         self.__ORIGIN_PATH = '/home/daniel/Desktop/actualProject/pruebaprocess/Origin'
         self.__DESTINY_PATH = '/home/daniel/Desktop/actualProject/pruebaprocess/Destiny'
-        self.__ITER =1000
+        self.__ITER = 1000
+        self.__DB_URL = 'postgresql://admin:admin@localhost:5432/pruebas'
 
     @property
     def OK(self):
@@ -55,6 +56,11 @@ class Constants:
     def ITER(self):
 
         return self.__ITER
+    
+    @property
+    def DB_URL(self):
+
+        return self.__DB_URL
 
 
         

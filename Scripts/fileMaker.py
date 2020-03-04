@@ -11,15 +11,22 @@ class FileMaker:
         self.constants = cts()
         self.files = Files()
 
-    def gen_initialize(self, ar_path):
-        n = 0
-
-        while True:
-            n += 1
-            name = '{}.txt'.format(n)
-            self.files.fn_file_maker(ar_path, name)
-            yield name
+    def fn_cleaner(self, ar_path):
+        print('--Removing files from Destiny--')
+        exitValue = fm.files.fn_remove_all(ar_path)
+        if exitValue == fm.constants.OK:
+            print('DONE')
+            time.sleep(5)
+        else:
+            print('SOMETHING FAIL')
     
+    def fn_file_maker(self, ar_path, n):
+        name = '{}.txt'.format(n)
+        exitValue = fm.files.fn_file_maker(originPath, name)
+        if exitValue == fm.constants.OK:
+            print('Created file: ', name)
+        else:
+            print('SOMETHING FAIL')
 
 if __name__ == "__main__":
     
@@ -29,20 +36,11 @@ if __name__ == "__main__":
     n = 1
     while True:
         if fm.files.fn_get_len_path(destinyPath) >= fm.constants.ITER:
-            print('--Removing files from Destiny--')
-            exitValue = fm.files.fn_remove_all(destinyPath)
-            if exitValue == fm.constants.OK:
-                print('DONE')
-                time.sleep(2)
-            else:
-                print('SOMETHING FAILS')
-
+            fm.fn_cleaner(destinyPath)
         else:
             while fm.files.fn_get_len_path(originPath) < fm.constants.ITER :
-                name = '{}.txt'.format(n)
+                fm.fn_file_maker(originPath, n)
                 n += 1
-                fm.files.fn_file_maker(originPath, name)
-                print('Created file: ', name)
             else:
                 print('There\'s no space')
                 time.sleep(10)
