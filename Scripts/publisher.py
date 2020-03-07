@@ -3,7 +3,6 @@ import sys
 import random
 from os import path
 import time
-from tqdm import tqdm
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from modules.tasksManager import TaskManager

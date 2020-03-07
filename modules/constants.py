@@ -12,8 +12,8 @@ class Constants:
         self.__ERROR = -1
         self.__NODATA = 100
         self.__GLOBALCONFIG = os.path.join(os.path.dirname(os.path.abspath(__file__)),"config","globalConfig.properties")
-        self.__ORIGIN_PATH = '/home/daniel/Desktop/actualProject/pruebaprocess/Origin'
-        self.__DESTINY_PATH = '/home/daniel/Desktop/actualProject/pruebaprocess/Destiny'
+        self.__ORIGIN_PATH = '/home/daniel/Desktop/Projects/postgresqlTasksManager/Origin'
+        self.__DESTINY_PATH = '/home/daniel/Desktop/Projects/postgresqlTasksManager/Destiny'
         self.__ITER = 1000
         self.__DB_URL = 'postgresql://admin:admin@localhost:5432/pruebas'
 

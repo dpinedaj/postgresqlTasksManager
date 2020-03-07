@@ -2,7 +2,6 @@
 import os
 import sys
 import time
-from tqdm import tqdm
 from datetime import datetime
 from datetime import timedelta
 
@@ -24,6 +23,7 @@ if __name__ == '__main__':
         else:
             try:
                 exitValue = fls.fn_move_file(cts.ORIGIN_PATH, cts.DESTINY_PATH, task.file_name)
+                
             except Exception as ex:
                 task.failed(ex)
 
