@@ -1,0 +1,5 @@
+1. Cambiar rutas en modules/constants.py
+2. $ alembic upgrade head
+3. $ python Scripts/fileMaker.py
+4. $ python Scripts/publisher.py
+5. $ python Scripts/subscriptor.py

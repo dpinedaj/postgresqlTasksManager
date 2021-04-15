@@ -16,7 +16,8 @@ class Files:
                 f.write(' ')
             exitValue = self.constants.OK
 
-        except:
+        except Exception as ex:
+            print(str(ex))
             exitValue = self.constants.ERROR
 
         return exitValue
@@ -27,7 +28,8 @@ class Files:
         try:
             listPath = os.listdir(ar_path)
             exitValue = self.constants.OK
-        except:
+        except Exception as ex:
+            print(str(ex))
             exitValue = self.constants.ERROR
         
         return listPath, exitValue
@@ -39,7 +41,8 @@ class Files:
             listPath = os.listdir(ar_path)
             lenPath = len(listPath)
             
-        except:
+        except Exception as ex:
+            print(str(ex))
 
             lenPath = 0
         
@@ -55,7 +58,8 @@ class Files:
         try:
             shutil.move(originPath, destinyPath)
             exitValue = self.constants.OK
-        except:
+        except Exception as ex:
+            print(str(ex))
             exitValue = self.constants.ERROR
 
         return exitValue
@@ -67,7 +71,8 @@ class Files:
         try:
             os.remove(filePath)
             exitValue = self.constants.OK
-        except:
+        except Exception as ex:
+            print(str(ex))
             exitValue = self.constants.ERROR
 
         return exitValue
@@ -82,7 +87,8 @@ class Files:
                 os.remove(filePath)
             exitValue = self.constants.OK
 
-        except:
+        except Exception as ex:
+            print(str(ex))
             exitValue = self.constants.ERROR
         
         return exitValue
