@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import sys
 import os
-
+from pathlib import Path
 
 class Constants:
 
@@ -12,8 +12,8 @@ class Constants:
         self.__ERROR = -1
         self.__NODATA = 100
         self.__GLOBALCONFIG = os.path.join(os.path.dirname(os.path.abspath(__file__)),"config","globalConfig.properties")
-        self.__ORIGIN_PATH = '/home/daniel/Desktop/tests/postgresqlTasksManager/Origin'
-        self.__DESTINY_PATH = '/home/daniel/Desktop/tests/postgresqlTasksManager/Destiny'
+        self.__ORIGIN_PATH = os.path.join(Path(os.getcwd()).parent.absolute(), 'Origin')
+        self.__DESTINY_PATH = os.path.join(Path(os.getcwd()).parent.absolute(), 'Destiny')
         self.__ITER = 1000
         self.__DB_URL = 'postgresql://admin:admin@localhost:5432/pruebas'
 
