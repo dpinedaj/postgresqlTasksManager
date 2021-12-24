@@ -6,8 +6,9 @@ This repository has a task manager to create files in a folder with a file maker
 Usage:
 
 1. $ docker-compose up
-2. $ pipenv shell
-3. $ alembic upgrade head
-4. $ python Scripts/fileMaker.py
-5. $ python Scripts/publisher.py
-6. $ python Scripts/subscriptor.py
+2. $ pipenv install
+3. $ pipenv shell
+4. $ alembic upgrade head
+5. $ python Scripts/fileMaker.py
+6. $ python Scripts/publisher.py
+7. $ python Scripts/subscriptor.py
