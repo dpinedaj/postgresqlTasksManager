@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'docker-compose up'
+        sh '''apt update
+apt install -y docker-compose
+docker-compose up'''
       }
     }
 
